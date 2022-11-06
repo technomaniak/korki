@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-int str2int(string input, int base_system)
+int any2dec(const string &input, const int &base_system)
 {
     int output = 0;
 
@@ -43,17 +43,20 @@ string dec2any(int input, int base_system)
 
 int main()
 {
-    int input_base, output_base, i, test;
+    int input_base, output_base, i, output;
     string result = "";
     string input_number;
 
+    // number is 10111
     cout << "Input a number: ";
     cin >> input_number;
+    // in this case 2
     cout << "Input the numbers base: ";
     cin >> input_base;
+    // in this case 10
     cout << "Input requested base: ";
     cin >> output_base;
 
-    test = str2int(input_number, input_base);
-    cout << dec2any(test, output_base) << "\n";
+    output = any2dec(input_number, input_base);
+    cout << dec2any(output, output_base) << "\n";
 }
