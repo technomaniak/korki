@@ -8,6 +8,7 @@ bool isPalindromic(const string &input)
     for (int i = 0; i < input.size() / 2; i++)
     {
         int input_size = input.size() - i - 1;
+
         if (input[i] != input[input_size])
         {
             return false;
