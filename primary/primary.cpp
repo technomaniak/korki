@@ -4,8 +4,8 @@ using namespace std;
 
 bool checkIfPrimary(int input)
 {
-    int divide = 2;
-    while (divide * 2 < input)
+    int divide = 2; // dzielnik
+    while (divide * 2 <= input)
     {
         if (input % divide == 0)
         {
