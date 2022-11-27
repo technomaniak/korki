@@ -54,16 +54,16 @@ int main()
     ifstream wejscie("dane.txt");
     ofstream wyjscie("wyjscie.out");
 
+    cout << "Klucz: ";
+    cin >> move;
+
     while (!wejscie.eof())
     {
         getline(wejscie, input);
 
-        cout << "Klucz: ";
-        cin >> move;
-
         string output = input;
 
         encode(input, move, output);
-        wyjscie << output;
+        wyjscie << output << "\n";
     }
 }
